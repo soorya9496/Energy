@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Booking Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1 class="font-weight-bold text-center" style="font-size: 30px;"><u>CUSTOMER DETAILS</u></h1> 
+  <div class="row mt-4">
+    <div class="col-sm-12">
+      <h1 class="font-weight-bold text-center" style="font-size: 30px;">Fuel Order Details</h1>            
+  
+
+  <table class="table table-dark table-hover table-bordered mt-4">
+    <thead >
+      <tr>
+        <th scope="col">FIRST NAME</th>
+        <th scope="col">LAST NAME</th>
+        <th scope="col">CURRENT ADDRESS</th>
+        <th scope="col">CURRENT PLACE</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">PLACE</th>
+        <th scope="col">AMOUND</th>
+        <th scope="col">SELECTED PUMP</th>
+      </tr>
+    </thead>
+    <tbody class="table table-success table-striped">
+      {% for d in data1 %} 
+      <tr>
+        
+            <td>{{ d.fname }}</td>
+            <td>{{ d.lname }}</td>
+            <td>{{ d.c_address }}</td>
+            <td>{{ d.place }}</td>
+            <td>{{ d.phone }}</td>
+            <td>{{ d.fuel }}</td>
+            <td>{{ d.quantity }}</td>
+            <td>{{ d.pump }}</td>
+        
+      </tr>
+      {% endfor %}   
+      
+    </tbody>
+  </table>
+    </div>
+  </div>
+
+
+
+  <div class="row mt-4">
+    <div class="col-sm-12">
+      <h1 class="font-weight-bold text-center" style="font-size: 30px;">Oil Change DETAILS</h1>            
+  
+
+  <table class="table table-secondary table-striped table-hover table-bordered mt-4">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">FIRST NAME</th>
+        <th scope="col">LAST NAME</th>
+        <th scope="col">CURRENT ADDRESS</th>
+        <th scope="col">CURRENT PLACE</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">Oil Brand</th>
+        <th scope="col">AMOUND of Fuel</th>
+        <th scope="col">SELECTED PUMP</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for o in data2 %} 
+      <tr>
+        
+            <td>{{ o.firstname }}</td>
+            <td>{{ o.lastname }}</td>
+            <td>{{ o.oil_c_address }}</td>
+            <td>{{ o.oilplace }}</td>
+            <td>{{ o.oilphone }}</td>
+            <td>{{ o.oil }}</td>
+            <!-- <td>{{ o.oilfuel }}</td> -->
+            <td>{{ o.oilquantity }}</td>
+            <td>{{ o.oilpump }}</td>
+        
+      </tr>
+      {% endfor %}   
+      
+    </tbody>
+  </table>
+    </div>
+  </div>
+   
+</div>
+
+</body>
+</html>

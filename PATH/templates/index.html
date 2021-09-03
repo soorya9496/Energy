@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Energy Path</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static '/img/petrol.jpg' %}" rel="icon">
+  <link href="{% static '/img/petrol.jpg' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Bethany - v4.3.0
+  * Template URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light"><a href="index.html"><span>Energy Path</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+            <li class="dropdown"><a href="#"><span class="apply">Apply Now <i class="bi bi-chevron-down"></i></span></a>
+              <ul>
+                <li><a href="{% url 'booking' %}">Fuel Booking</a></li>
+                <li><a href="{% url 'oilchange' %}">Oil Change</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div><!-- End Header Container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>our services is to keep you convenient.</h1>
+      <h2>Anytime, Anywhere and on time, This is what our service mean. </h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        
+        <div class="row content">
+          <h2 class="text-center text-decoration-underline" style="color: #e25a0c;">ABOUT</h2>
+          
+          <div class="col-lg-6 " data-aos="fade-right" data-aos-delay="100">
+            <img class="img img-fluid rounded float-start" src="{% static '/img/petrol2.jpg' %}" alt="">
+          </div>
+          <div class="col-lg-6  pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
+            <p>
+              Energy Path is an essential service when someone is stuck on the road due to no fuel.
+               No more worries when you get stuck next time because of an empty fuel tank. 
+               We deliver 2 to 5 liters of petrol or diesel of your choice at your spot. 
+               The fuel will be charged at the actuals and our fuel delivery charges are additional.
+                
+            </p>
+            <p class="fst-italic">
+              We bring fuel in a safe jerry can from the nearest fuel station available and the fuel
+                 will be directly filled into the vehicle by our representative and will not be delivered 
+                 in can to the customer. The delivery time of the fuel varies depending on how far the 
+                 nearest fuel station is available.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right">
+            <div class="content">
+              <h3>Why Choose Energy Path?</h3>
+              <p>
+                Handling your fuel needs on your own can often be challenging and time consuming.Our fuel experts are absolutely up to date on all safety standards, and take our services very seriously. By having our team handle the process you save yourself the fear of fume inhalation and flammable fuel dangers.
+                We are fully trained experts, and undergo routine training to stay on top of all modern (and days past) technologies.
+                You can run out of fuel at a bad time, or an incident may occur that leaves you without adequate fuel for heating or a storm generator. But no matter what might come, we’ve got you covered at all times with our emergency delivery and fuel services.
+
+              </p>
+              
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <img src="{% static '/img/247-service.png' %}" alt="onspot">
+                    <h4>24/7 Onspot Service</h4>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <img src="{% static '/img/onspot.png' %}" alt="on-the-spot">
+                    <h4>On-the-spot support</h4>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <img src="{% static '/img/speed.png' %}" alt="speed">
+                    <h4>Fastest Turn-around</h4>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="row">
+          <!-- <div class="col-lg-4">
+            <div class="section-title" data-aos="fade-right">
+              <h2 style="margin-top: 70px; color: #e25a0c;">Services</h2>
+              <p>Magnam dolores commodi suscipit nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+          </div> -->
+          <!-- <div class="col-lg-8"> -->
+            <div class="row">
+              <h2 class="text-center text-decoration-underline" style="color: #e25a0c; font-size: 50px;">Services</h2>
+              <div class="col-md-6 d-flex align-items-stretch">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon"><i class="bi bi-water"></i></div>
+                  <h4><a href="">Oil Change</a></h4>
+                  <p>An Oil Change is the act of removing the used oil in your engine and replacing it with new, clean oil. </p>
+                </div>
+              </div>
+
+              
+
+              <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="icon"><i class="bi bi-snow"></i></div>
+                  <h4><a href="">Free Air</a></h4>
+                  <p>If you have been paying to fill the air in your tyres at petrol stations, well, this will come as bittersweet news.</p>
+                </div>
+              </div>
+
+            </div>
+          <!-- </div> -->
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+  
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3 style="color: darkorange;">Energypath</h3>
+            <p>
+              Parappanangadi <br>
+              Malapuram <br>
+              Kerala <br>
+              676303<br><br>
+              <strong>Phone:</strong> +91 9496 9662 46<br>
+              <strong>Email:</strong> energypath@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#why-us">Why choose anergy path</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Oil Change</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Free Air</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#why-us">On-the-spot support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#why-us">Fastest Turn-around</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#why-us">24/7 Onspot Service</a></li>
+            </ul>
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright" style="font-size: 20px;">
+          &copy;  <strong><span>Energy Path - 2021</span></strong>
+        </div>
+        <!-- <div class="credits" style="color: white;">
+          
+          Designed by <a href="">SOORYA</a>
+        </div> -->
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/vendor/aos/aos.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static '/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static '/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static '/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text],[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="" method="POST">{% csrf_token %}
+    <label for="fname">First Name</label>
+    <input type="text" id="firstname" name="c_name" placeholder="Your name..">
+  
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="c_email" placeholder="Your last Email Id..">
+    
+    <label for="subject">subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Your last subject..">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="submit">
+  </form>
+</div>
+
+</body>
+</html>
+ -->
+
+
+ {% load static %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+      <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/css/style.css' %}" rel="stylesheet">
+     <style>
+         .contact .info {
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #fff;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #e25a0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #36343a;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #686470;
+}
+
+.contact  {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact  .form-group {
+  padding-bottom: 8px;
+}
+
+.contact  .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact  .error-message br + br {
+  margin-top: 25px;
+}
+
+.contact  .sent-message {
+  display: none;
+  color: #fff;
+  background: #e25a0c;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact  .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact  .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #e25a0c;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact  input, .contact  textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact  input {
+  height: 44px;
+}
+
+.contact  textarea {
+  padding: 10px 12px;
+}
+
+.contact  button[type="submit"] {
+  background: #e25a0c;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact  button[type="submit"]:hover {
+  background: #e25a0c;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+     </style>
+ </head>
+ <body>
+    <section id="contact" class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <div class="section-title">
+                <h2>Contact</h2>
+                <p>We bring fuel in a safe jerry can from the nearest fuel station available and the fuel will be directly
+                   filled into the vehicle by our representative and will not be delivered in can to the customer</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+              <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31327.03302227732!2d75.84236286305429!3d11.047688152073597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6530502897529%3A0x8bda4493cf338823!2sBharat%20Petroleum%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1628524176018!5m2!1sen!2sin"  frameborder="0" allowfullscreen></iframe>
+              <div class="info mt-4">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Parappanangadi, Malapuram, Kerala, 676303</p>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 mt-4">
+                  <div class="info">
+                    <i class="bi bi-envelope"></i>
+                    <h4>Email:</h4>
+                    <p>energypath@gmail.com</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="info w-100 mt-4">
+                    <i class="bi bi-phone"></i>
+                    <h4>Call:</h4>
+                    <p>+91 9496 9662 46</p>
+                  </div>
+                </div>
+              </div>
+  
+              <form action="{% url 'contact' %}" method="POST" role="form" class="mt-4">{% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="c_name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="c_email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message"  placeholder="Message" style="height: 100px;" required></textarea>
+                </div>
+                <!-- <div class="my-3"> -->
+                  <!-- <div class="loading">Loading</div> -->
+                  <!-- <div class="error-message"></div> -->
+                  <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                <!-- </div> -->
+                <div class="text-center"><button type="submit">Send Message</button></div>
+                
+                  <font style="color: red;"> {{msg}}</font>
+                
+              </form>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+
+      <!-- Vendor JS Files -->
+    <script src="{% static '/vendor/aos/aos.js' %}"></script>
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static '/vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static '/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static '/js/main.js' %}"></script>
+
+ </body>
+ </html>
